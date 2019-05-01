@@ -38,10 +38,16 @@ namespace RingWorld
             {
                 Spice spice = new Spice( this.maxSpice, 1, rnd.Next(ThreadStaticAttribute.maxSpice), i, this.map);
             }
+            
             // Loop for cycles
+            for( int i = 0; i < this.cycles; i++)
+            {
                 // Print
                 // delay
                 // Update
+            }
+
+            // Print
         }
     }
 }
