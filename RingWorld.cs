@@ -5,7 +5,9 @@ namespace RingWorld
 
     class RingWorld
     {
-        int size = 10;
+        int size = 150;
+        int maxSpice = 4;
+        
         int cycles = 10;
         int delay = 100;
 
@@ -27,7 +29,7 @@ namespace RingWorld
 
             // Create Map
             this.map = new Map(spaces);
-            
+
             // Create Food
 
             // Loop for cycles
