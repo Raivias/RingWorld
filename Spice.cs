@@ -29,7 +29,7 @@ namespace RingWorld.MapObject
             this.Amount += rnd.Next(this.Max);
         }
 
-        public IMapObject Update()
+        new public IMapObject Update()
         {
             newSpice.Generate();
             return this;

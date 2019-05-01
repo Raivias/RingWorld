@@ -1,15 +1,18 @@
 namespace RingWorld
 {
+    using System;
     using System.Collections.Generic;
     using RingWorld.MapObject;
 
     class RingWorld
     {
-        int size = 150;
-        int maxSpice = 4;
-        
-        int cycles = 10;
-        int delay = 100;
+        private static readonly Random rnd = new Random();
+
+        public int size = 150;
+        public int maxSpice = 4;
+
+        public int cycles = 10;
+        public int delay = 100;
 
         Map map;
 
@@ -30,8 +33,11 @@ namespace RingWorld
             // Create Map
             this.map = new Map(spaces);
 
-            // Create Food
-
+            // Create Spice
+            for(int i = 0; i < this.size; i++)
+            {
+                Spice spice = new Spice( this.maxSpice, 1, rnd.Next(ThreadStaticAttribute.maxSpice), i, this.map);
+            }
             // Loop for cycles
                 // Print
                 // delay

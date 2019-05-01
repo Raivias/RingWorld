@@ -1,6 +1,6 @@
 # Ring World
 
-Based on an example in "Growing Artifical Societies" by Epstein and Axtell, page 170-176. I figured this would be a good starting point for attempting to build a multi-agent environment.
+Based on an example in ["Growing Artifical Societies" by Epstein and Axtell](https://mitpress.mit.edu/books/growing-artificial-societies), page 170-176. I figured this would be a good starting point for attempting to build a multi-agent environment.
 
 ## Rules
 
@@ -25,3 +25,4 @@ Based on an example in "Growing Artifical Societies" by Epstein and Axtell, page
 ### Questions to explore
 - What happens if an agent burns spice equal to what they move?
 - What happens if an agent can see it's current space instead of move?
+- How does having spice grow to max affect outcome?

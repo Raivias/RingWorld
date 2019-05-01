@@ -14,9 +14,9 @@ namespace RingWorld
 
         private IList<Space> adjecentSpaces = new List<Space>();
 
-        public IList<IMapObjects> objectsInSpace = new List<IMapObjects>();
+        public IList<IMapObject> objectsInSpace = new List<IMapObject>();
 
-        public AddAdjecentSpaces(Space space)
+        public void AddAdjecentSpaces(Space space)
         {
             this.adjecentSpaces.Add(space);
         }

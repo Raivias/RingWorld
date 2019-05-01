@@ -16,7 +16,7 @@ namespace RingWorld.MapObject
             private set;
         }
 
-        IMapObject Update()
+        public IMapObject Update()
         {
             return this;
         }
