@@ -13,10 +13,10 @@ class Space(object):
 
     def print(self):
         c = u"\u2B1C"
-        if self.agent is not None:
-            c = "A"
-        elif self.spice is not None:
+        if self.spice is not None:
             c = str(self.spice.count)
+        if self.agent is not None:
+            c = '\33[46m' + c + '\033[0m'
         print(c, end='', flush=True)
 
 
