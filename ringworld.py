@@ -1,8 +1,12 @@
+import agent
+import argparse
+import random
 import ring
 import spice
+import time
 import world
-import random
-import agent
+
+description="A simple multi-agent system. Colored cells are agents, numbers are spice"
 
 
 class RingWorld(object):
@@ -40,7 +44,7 @@ class RingWorld(object):
         self.seed()
         self.world.print()
         i = steps
-        while i >= 0:
+        while i != 0:
             # Spices Grow
             spices = self.world.resources.get_type(spice.Spice)
             for s in spices:
@@ -50,12 +54,19 @@ class RingWorld(object):
             random.shuffle(agents)
             for a in agents:
                 a.step()
-
+            time.sleep(0.2)
             self.world.print()
             i -= 1
         pass
 
 
 if __name__ == "__main__":
-    ring_world = RingWorld()
-    ring_world.run(1000)
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument("--cycles", help="Number of cycles to run", type=int, default=-1)
+    parser.add_argument("--max_v", help="max agent vision", type=int, default=30)
+    parser.add_argument("--min_v", help="min agent vision", type=int, default=15)
+
+    args = parser.parse_args()
+
+    ring_world = RingWorld(min_vision=args.min_v, max_vision=args.max_v)
+    ring_world.run(args.cycles)

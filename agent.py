@@ -13,7 +13,7 @@ class Agent(entity.Entity):
         prev_space = self.space
         for index in range(self.vision):
             current_space = prev_space.left_neighbor
-            if current_space.spice.count >= best_space.spice.count and current_space.agent is None:
+            if current_space.spice.count > best_space.spice.count and current_space.agent is None:
                 best_space = current_space
             prev_space = current_space
 
