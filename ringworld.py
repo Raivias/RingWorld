@@ -1,12 +1,10 @@
-import agent
+from agents import agent, spice
 import argparse
 import random
-import ring
-import spice
 import time
-import world
+from space import world, ring
 
-description="A simple multi-agent system. Colored cells are agents, numbers are spice"
+description = "A simple multi-agent system. Colored cells are agents, numbers are spice"
 
 
 class RingWorld(object):
@@ -21,9 +19,9 @@ class RingWorld(object):
 
     def seed(self):
         def spice_seed(space: world.Space):
-            s = spice.Spice(random.randint(self.min_spice, self.max_spice),self.min_spice, self.max_spice)
-            space.spice = s
-            return s
+            sp = spice.Spice(random.randint(self.min_spice, self.max_spice), self.min_spice, self.max_spice)
+            space.spice = sp
+            return sp
         self.world.seed(spice_seed)
 
         # assign agents to spaces

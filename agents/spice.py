@@ -1,4 +1,4 @@
-import entity
+from agents import entity
 from typing import Callable
 
 
