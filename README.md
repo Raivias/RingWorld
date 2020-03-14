@@ -26,3 +26,9 @@ Based on an example in ["Growing Artifical Societies" by Epstein and Axtell](htt
 - What happens if an agent burns spice equal to what they move?
 - What happens if an agent can see it's current space instead of move?
 - How does having spice grow to max affect outcome?
+
+### Future Developments
+- Add AgentAttributes to track aspects of agents (genes, memes, immune systems)
+- Build better interface
+- Expand Map types
+- More controllable environments
