@@ -1,4 +1,4 @@
-import world
+from space import world
 
 
 class Ring(world.World):
